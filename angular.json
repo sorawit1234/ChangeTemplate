@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "28bcf69c-f07b-4b5e-9a60-34ff1168d422"
+    "analytics": "71a07cde-02cf-4664-be92-21dd8f06888d"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gentemplate": {
+    "mywebTemplate": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gentemplate",
+            "outputPath": "dist/mywebTemplate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gentemplate:build"
+            "browserTarget": "mywebTemplate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gentemplate:build:production"
+              "browserTarget": "mywebTemplate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gentemplate:build"
+            "browserTarget": "mywebTemplate:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "gentemplate:serve"
+            "devServerTarget": "mywebTemplate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "gentemplate:serve:production"
+              "devServerTarget": "mywebTemplate:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "gentemplate"
+  "defaultProject": "mywebTemplate"
 }
